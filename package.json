@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/nlimbu07/tech-blog#readme",
   "dependencies": {
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
   }
 }
