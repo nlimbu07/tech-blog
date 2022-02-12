@@ -1,0 +1,66 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Just Tech News</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />   
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'
+    />
+  </head>
+
+  <body>
+    <section class='hero is-primary'>
+      <div class='hero-body'>
+        <p class="title">Tech Blog</p>      
+              {{#if loggedIn}}
+              <div class="field is-grouped">
+                <div class="control">
+                  <a class='button is-secondary' href='/'>Home</a>
+                </div>
+                <div class="control">
+                  <a
+                    class='button is-secondary'
+                    href='/dashboard'
+                  >Dashboard</a>
+                </div>
+                <div class="control">
+                  <button
+                    class='button is-secondary'
+                    id='logout'
+                  >Logout</button>
+                </div>
+              </div>
+                {{else}}
+                <div class="field is-grouped">
+                  <div class="control">
+  <a class='button is-secondary' href='/'>Home</a>
+                  </div>                                
+                  <div class="control">
+  <a class='button is-secondary' href='/login'>Login</a>
+                  </div>
+                </div>
+                  
+                {{/if}}
+              </ul>
+            </div>        
+      </div>
+    </section>
+    <main>
+      {{{body}}}
+    </main>
+    <footer class="footer">
+      <div class="content has-text-centered">        
+          <h2>Thanks for visiting!</h2>        
+      </div>
+    </footer>
+
+    {{#if loggedIn}}
+      <script src='/javascript/logout.js'></script>
+    {{/if}}
+
+  </body>
+
+</html>

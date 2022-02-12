@@ -1,0 +1,59 @@
+<section class='section'>
+  <div class='notification is-secondary'>
+    <p style='font-size:30px'>Edit Post</p>
+  </div>
+  <form class='edit-post-form'>
+    <div>
+      <label class='label' for='post-title'>Title</label>
+      <input
+        class='input'
+        name='post-title'
+        type='text'
+        value='{{post.title}}'
+        placeholder='Text input'
+      />
+    </div>
+    <div class='edit-post-text'>
+      <label for='edit-post-text'>Content</label>
+      <textarea
+        class='textarea'
+        name='edit-post-text'
+        id='edit-post-text'
+        cols='90'
+        rows='10'
+      >{{post.post_text}}</textarea>
+    </div>
+    <br />
+    <div class='field is-grouped'>
+      <div class='control'>
+        <button class='button is-primary' type='submit'>Save post</button>
+      </div>
+      <div class='control'>
+        <button type='button' class='button is-primary delete-post-btn'>Delete
+          post</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<section class="section">
+<form class="comment-form">
+  <div>
+    <textarea class='textarea' name="comment-body" cols="10" rows="1"></textarea>
+  </div>
+<br>
+  <div class="control">
+    <button class='button is-primary' type="submit">add comment</button>
+  </div>
+</form>
+</section>
+
+<section class="section">
+<div class="box">
+{{> comments post.comments}}
+</div>
+</section>
+
+<script src='/javascript/edit-post.js'></script>
+<script src='/javascript/delete-post.js'></script>
+<script src='/javascript/comment.js'></script>
